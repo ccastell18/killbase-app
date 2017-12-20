@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>CONTRACTS</title>
+</head>
+<%-include('partials/header') %>
+
+  <body>
+    <h3>Active Contracts</h3>
+    <%for(let i = 0; i < contracts.length; i++) {%>
+      <table>
+        <tr>
+          <td>
+          <img src= "<%= contracts[i].photo %>">
+              </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <%= contracts[i].target_name%>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <%= contracts[i].security %>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <%= contracts[i].location%>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <%= contracts[i].budget %>
+          </td>
+        </tr>
+        <td>
+          <%= contracts[i].completed %>
+        </td>
+        <tr>
+          <td>
+            <%= contracts[i].client %>
+          </td>
+        </tr>
+      </table>
+      <div style="float:center">
+      <a href="/contracts/:id/update">Update</a>
+      <a href="/contracts/:id/update">Complete</a>
+      <a href="/contracts/:id/delete">Delete</a>
+    </div>
+      <%}%>
+
+        <a href="/contracts/create">Create</a>
+
+
+  </body>
+
+</html>

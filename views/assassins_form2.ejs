@@ -1,0 +1,43 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ASSASSINS UPDATE</title>
+    <link rel="stylesheet" href="/public/styles.css">
+  <%-include('partials/header') %>
+</head>
+  <body class='form'>
+    <div style="margin-left: 500px;">
+    <form name="updatedAssassins" action="/assassins/<%= id %>/?_method=PUT" method="POST">
+      <label>ID: <%= id %> </label></br>
+      </br>
+      <label>FULL NAME: </label>
+      <input type="text" name="full_name" value="<%= full_name %>"></br>
+      </br>
+      <label>CODE NAME: </label>
+      <input type="text" name="codename" value="<%= codename %>"></br>
+      </br>
+      <label>WEAPON: </label>
+      <input type="text" name="weapon" value="<%= weapon %>"></br>
+      </br>
+      <label>CONTACT:</label>
+      <input type="text" name="contact" value="<%= contact %>"></br>
+      </br>
+      <label>AGE:</label>
+      <input type="number" name="age" value="<%= age %>"></br>
+      </br>
+      <label>PRICE: </label>
+      <input type="number" name="price" value="<%= price %>"></br>
+      </br>
+      <label>RATING:</label>
+      <input type="number" name="rating" value="<%= rating %>" step="0.1"></br>
+      </br>
+      <label>KILLS:</label>
+      <input type="number" name="kills" value="<%= kills %>"></br>
+      </br>
+      <button type="submit">UPDATE</button>
+    </form>
+  </div>
+  </body>
+
+</html>

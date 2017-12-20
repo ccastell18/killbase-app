@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ASSASSINS</title>
+  <link rel="stylesheet" href="/public/styles.css">
+</head>
+<%-include('partials/header') %>
+
+  <body>
+    <div>
+      <a href="/assassins/create" style="margin-left: 600px;">CREATE</a>
+      <%for(let i = 0; i < assassins.length; i++) {  %>
+        <table style="border: 1px black solid; margin-left: 500px;">
+          <tr>
+            <td>
+              <a href="/assassins/<%=assassins[i].id%>">
+                <%= assassins[i].id %>
+              </a>
+            </td>
+            <tr>
+              <td><label><b> Full Name:  </b></label>
+                <%= assassins[i].full_name%>
+              </td>
+              <td>
+                <label><b>Code Name: </b></label>
+                <%= assassins[i].codename%>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label><b>Rating:</b> </label>
+                <%= assassins[i].rating %>
+              </td>
+              <td>
+                <label><b>Kills: </b></label>
+                <%= assassins[i].kills %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label><b>Price: </b></label>
+                <%= assassins[i].price %>
+              </td>
+              <td>
+                <label><b>Age:</b> </label>
+                <%= assassins[i].age %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label><b>Weapon:</b> </label>
+                <%= assassins[i].weapon %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label><b>Contact:</b> </label>
+                <%= assassins[i].contact %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="/<%=assassins[i].id%>/assassins_form2">update</a>
+              </td>
+              <td>
+                <a href="/assassins/<%= assassins[i].id%>/delete">delete</a>
+              </td>
+
+              <%}%>
+        </table>
+    </div>
+
+  </body>
+
+</html>

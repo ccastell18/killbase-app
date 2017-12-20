@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title> CREATE ASSASSIN</title>
+</head>
+<%-include('partials/header') %>
+<body>
+  <form name="create assassin" action="/assassins" method="POST">
+     <input type="hidden" name="_method" value="PATCH">
+    <label>FULL NAME: </label>
+    <input type="text" name="full_name" value=""></br>
+    <label>CODE NAME: </label>
+    <input type="text" name="codename" value=""></br>
+    <label>WEAPON: </label>
+    <input type="text" name="weapon" value=""></br>
+    <label>CONTACT:</label>
+    <input type="text" name="contact" value=""></br>
+    <label>AGE:</label>
+    <input type="number" name="age" value=""></br>
+    <label>PRICE: </label>
+    <input type="number" name="price" value=""></br>
+    <label>RATING:</label>
+    <input type="number" name="rating" value="" step="0.1"></br>
+    <label>KILLS:</label>
+    <input type="number" name="kills" value=""></br>
+
+    <button type="submit">SUBMIT</button>
+  </form>
+</body>
+</html>
